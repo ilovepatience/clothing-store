@@ -1,0 +1,83 @@
+.pagination {
+    margin: 50px 0 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.pagination-btn {
+    padding: 11px 17px;
+    border: 1px solid #e2e8f0;
+    background-color: white;
+    color: #374151;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 15px;
+    min-width: 42px;
+    font-weight: 500;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background-color: #f8fafc;
+    border-color: #94a3b8;
+    transform: translateY(-1px);
+}
+
+.pagination-btn.active {
+    background-color: #9f1239;
+    color: white;
+    border-color: #9f1239;
+    font-weight: 600;
+}
+
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.pagination-dots {
+    padding: 10px 14px;
+    color: #64748b;
+    font-size: 16px;
+}
+
+/* ====================== АДАПТИВНІСТЬ ====================== */
+
+@media (max-width: 768px) {
+    .pagination {
+        margin: 40px 0 30px 0;
+        gap: 6px;
+    }
+
+    .pagination-btn {
+        padding: 9px 13px;
+        font-size: 14px;
+        min-width: 36px;
+    }
+
+    .pagination-dots {
+        padding: 8px 11px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pagination {
+        gap: 5px;
+    }
+
+    .pagination-btn {
+        padding: 8px 11px;
+        font-size: 13.5px;
+        min-width: 32px;
+    }
+
+    .pagination-dots {
+        padding: 7px 9px;
+        font-size: 14px;
+    }
+}

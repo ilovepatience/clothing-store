@@ -1,0 +1,236 @@
+.cart-page {
+    padding: 40px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cart-page h1 {
+    font-size: 34px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 35px;
+}
+
+/* Картка товару в кошику */
+.cart-item {
+    display: flex;
+    gap: 24px;
+    padding: 22px;
+    background-color: white;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.cart-item:hover {
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+    transform: translateY(-3px);
+}
+
+.cart-item-image {
+    width: 120px;
+    height: 120px;
+    background-color: #f1f5f9;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.cart-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cart-item-info {
+    flex: 1;
+}
+
+.cart-item-info h3 {
+    font-size: 19px;
+    margin-bottom: 6px;
+    color: #0f172a;
+}
+
+.cart-item-info p {
+    color: #64748b;
+    margin-bottom: 10px;
+}
+
+/* Керування кількістю */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 12px 0;
+}
+
+.quantity-controls button {
+    width: 34px;
+    height: 34px;
+    border: 1px solid #e2e8f0;
+    background: white;
+    color: #475569;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.quantity-controls button:hover {
+    background-color: #f8fafc;
+    border-color: #cbd5e1;
+}
+
+/* Видалення */
+.remove-btn {
+    color: #9f1239;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 8px 12px;
+    align-self: center;
+}
+
+.remove-btn:hover {
+    color: #88112f;
+}
+
+/* Підсумок */
+.cart-total {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 2px solid #e2e8f0;
+    text-align: right;
+}
+
+.cart-total h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #0f172a;
+}
+
+.cart-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.cart-buttons button {
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cart-buttons button:first-child {
+    background-color: #9f1239;
+    color: white;
+}
+
+.cart-buttons button:first-child:hover {
+    background-color: #88112f;
+}
+
+.cart-buttons button:last-child {
+    background-color: #88112f;
+    color: white;
+}
+
+.cart-buttons button:last-child:hover {
+    background-color: #9f1239;
+}
+
+/* Модальне вікно */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 40px 50px;
+    border-radius: 16px;
+    text-align: center;
+    max-width: 420px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+    color: #9f1239;
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+.modal-content p {
+    font-size: 16.5px;
+    color: #374151;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* ====================== АДАПТИВНІСТЬ ====================== */
+
+@media (max-width: 768px) {
+    .cart-page {
+        padding: 20px 15px;
+    }
+
+    .cart-page h1 {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 18px;
+    }
+
+    .cart-item-image {
+        width: 100%;
+        height: 200px;
+    }
+
+    .cart-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .cart-buttons button {
+        width: 100%;
+        padding: 14px;
+    }
+
+    .cart-total h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .cart-item {
+        padding: 15px;
+    }
+
+    .quantity-controls {
+        gap: 10px;
+    }
+}

@@ -1,0 +1,119 @@
+.profile-page {
+    max-width: 620px;
+    margin: 80px auto;
+    padding: 48px 40px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #0f172a;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.profile-info {
+    background-color: #f8fafc;
+    padding: 28px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+
+.profile-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.profile-field:last-child {
+    border-bottom: none;
+}
+
+.profile-field strong {
+    color: #374151;
+    font-weight: 600;
+    min-width: 160px;
+}
+
+.profile-field span {
+    color: #0f172a;
+    font-weight: 500;
+}
+
+/* Кнопка виходу */
+.profile-actions {
+    margin-top: 20px;
+}
+
+.logout-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #9f1239;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #88112f;
+    transform: translateY(-1px);
+}
+
+/* ====================== АДАПТИВНІСТЬ ====================== */
+
+@media (max-width: 768px) {
+    .profile-page {
+        margin: 40px 15px;
+        padding: 35px 25px;
+        max-width: 100%;
+    }
+
+    .profile-container h2 {
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
+
+    .profile-info {
+        padding: 24px;
+    }
+
+    .profile-field {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        padding: 16px 0;
+    }
+
+    .profile-field strong {
+        min-width: auto;
+    }
+
+    .logout-btn {
+        padding: 14px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-page {
+        margin: 30px 10px;
+        padding: 30px 20px;
+    }
+
+    .profile-container h2 {
+        font-size: 24px;
+    }
+
+    .profile-info {
+        padding: 20px;
+    }
+}
