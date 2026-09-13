@@ -20,7 +20,6 @@ const Pagination = ({ currentPage, totalPages, onPageChange }: PaginationProps) 
             </button>
 
             {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => {
-                // Скорочена пагінація при великій кількості сторінок
                 if (totalPages > 7) {
                     if (page === 1 || page === totalPages ||
                         (page >= currentPage - 1 && page <= currentPage + 1)) {

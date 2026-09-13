@@ -122,12 +122,12 @@ h1 {
 
     .actions {
         width: 100%;
-        flex-direction: column;     /* Кнопки одна під одною */
+        flex-direction: column;
         gap: 8px;
     }
 
     .btn {
-        width: 100%;                /* Кнопки на всю ширину */
+        width: 100%;
         padding: 11px 20px;
         font-size: 15px;
         text-align: center;

@@ -21,7 +21,6 @@ const ProductDetail = () => {
     useEffect(() => {
         if (!id) return;
 
-        // Тимчасово очищаємо токен для цього запиту
         delete axios.defaults.headers.common['Authorization'];
 
         axios.get(`${API_URL}/api/products/${id}/`)

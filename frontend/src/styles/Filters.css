@@ -79,7 +79,7 @@
 
 @media (max-width: 768px) {
     .filters {
-        position: static;           /* Прибираємо sticky на мобільних */
+        position: static;
         width: 100%;
         padding: 24px 20px;
         margin-bottom: 25px;

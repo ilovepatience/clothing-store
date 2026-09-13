@@ -12,7 +12,6 @@ const Cart = () => {
         if (cart.length === 0) return;
 
         setShowModal(true);
-        // Очищаємо кошик тільки після показу модального вікна
     };
 
     const closeModal = () => {

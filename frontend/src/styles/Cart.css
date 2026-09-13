@@ -11,7 +11,6 @@
     margin-bottom: 35px;
 }
 
-/* Картка товару в кошику */
 .cart-item {
     display: flex;
     gap: 24px;
@@ -58,7 +57,6 @@
     margin-bottom: 10px;
 }
 
-/* Керування кількістю */
 .quantity-controls {
     display: flex;
     align-items: center;
@@ -86,7 +84,6 @@
     border-color: #cbd5e1;
 }
 
-/* Видалення */
 .remove-btn {
     color: #9f1239;
     background: none;
@@ -101,7 +98,6 @@
     color: #88112f;
 }
 
-/* Підсумок */
 .cart-total {
     margin-top: 50px;
     padding-top: 30px;
@@ -149,7 +145,6 @@
     background-color: #9f1239;
 }
 
-/* Модальне вікно */
 .modal-overlay {
     position: fixed;
     top: 0;

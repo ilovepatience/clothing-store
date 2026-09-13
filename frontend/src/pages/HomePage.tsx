@@ -18,7 +18,7 @@ const HomePage = ({ searchTerm }: HomePageProps) => {
     const [currentPage, setCurrentPage] = useState(1);
     const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
 
-    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+    const API_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
 
     // Завантаження товарів
     useEffect(() => {
@@ -31,11 +31,9 @@ const HomePage = ({ searchTerm }: HomePageProps) => {
             .finally(() => setLoading(false));
     }, [API_URL]);
 
-    // Фільтрація + Пошук + Сортування (товари без запасу — в кінець)
     const displayedProducts = useMemo(() => {
         let result = [...filteredProducts];
 
-        // Пошук
         if (searchTerm.trim()) {
             const term = searchTerm.toLowerCase().trim();
             result = result.filter(product =>
@@ -50,11 +48,9 @@ const HomePage = ({ searchTerm }: HomePageProps) => {
             const stockA = a.stock || 0;
             const stockB = b.stock || 0;
 
-            // Товари без запасу — в кінець
             if (stockA === 0 && stockB > 0) return 1;
             if (stockB === 0 && stockA > 0) return -1;
 
-            // Звичайне сортування
             if (sortOption === 'price-low') {
                 return parseFloat(a.final_price || a.price) - parseFloat(b.final_price || b.price);
             }
