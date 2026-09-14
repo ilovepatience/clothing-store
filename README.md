@@ -38,6 +38,24 @@ The project consists of a React + TypeScript frontend and a Django REST Framewor
 - REST API
 - Django Admin
 
+## Screenshots
+
+### Product Catalog
+
+![Product Catalog](screenshots/catalog.png)
+
+### Product Details
+
+![Product Details](screenshots/product-detail.png)
+
+### Shopping Cart
+
+![Shopping Cart](screenshots/cart.png)
+
+### User Profile
+
+![User Profile](screenshots/profile.png)
+
 ## Project Structure
 
 ```text
