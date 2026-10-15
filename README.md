@@ -52,6 +52,7 @@ The project consists of a React + TypeScript frontend and a Django REST Framewor
 
 ![Shopping Cart](screenshots/cart.png)
 
+
 ### User Profile
 
 ![User Profile](screenshots/profile.png)

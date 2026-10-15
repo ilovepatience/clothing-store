@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
-import '../styles/Register.css';   // або Login.css
+import '../styles/Register.css';
 
 const Login = () => {
     const [username, setUsername] = useState('');
